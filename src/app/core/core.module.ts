@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { DashboardComponent } from './users/components/dashboard/dashboard.component';
-import { AsyncPipe } from '@angular/common';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-import { UsersEffects } from './users/store/users.effects';
-import { usersReducer } from './users/store/users.reducer';
+import { AsyncPipe, JsonPipe } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [DashboardComponent],
   imports: [
     AsyncPipe,
-    StoreModule.forRoot({ users: usersReducer }),
-    EffectsModule.forRoot([UsersEffects])
+    JsonPipe,
+    BrowserModule
   ],
   exports: [DashboardComponent],
   providers: [],

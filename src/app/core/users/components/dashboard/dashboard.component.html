@@ -1,3 +1,5 @@
+<mat-drawer-container class="example-container" autosize>
+
 <h2>Dashboard:</h2>
 
 <div *ngFor="let user of users$ | async">
@@ -9,4 +11,6 @@
 
 <hr />
 
-<app-user-details [selectedUser]="selectedUser"></app-user-details>
+<app-side-nav [selectedUser]="selectedUser"></app-side-nav>
+
+</mat-drawer-container>

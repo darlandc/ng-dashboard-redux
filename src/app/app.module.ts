@@ -9,6 +9,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { UsersEffects } from './core/users/store/users.effects';
 import { usersReducer } from './core/users/store/users.reducer';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { usersReducer } from './core/users/store/users.reducer';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
+    HttpClientModule,
     StoreModule.forRoot({ users: usersReducer }),
     EffectsModule.forRoot([UsersEffects]),
     StoreDevtoolsModule.instrument({}),

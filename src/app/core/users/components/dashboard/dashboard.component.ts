@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   users$!: Observable<User[]>;
   loading$!: Observable<boolean>;
   error$!: Observable<any>;
-  selectedUser!: User | undefined;
+  selectedUser!: any;
 
   constructor(private store: Store) {}
 

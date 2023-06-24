@@ -29,7 +29,8 @@ export class DashboardComponent implements OnInit {
 
   selectUser(id: string) {
     this.store.select(selectUserById(id)).subscribe((user: any) => {
-      this.selectedUser = user
+      this.selectedUser = user;
+      this.store.dispatch(loadUserDetails(user));
     });
   }
 }

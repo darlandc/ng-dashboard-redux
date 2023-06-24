@@ -4,14 +4,14 @@ import { loadUsers, loadUsersSuccess, loadUsersFailure, loadUserDetails } from "
 
 export interface UserState {
   users: User[];
-  user: User | undefined;
+  selectedUser: User | undefined;
   loading: boolean;
   error: string | undefined;
 }
 
 const initialState: UserState = {
   users: [],
-  user: undefined,
+  selectedUser: undefined,
   loading: false,
   error: undefined
 };
@@ -22,5 +22,5 @@ export const usersReducer = createReducer(
   on(loadUsers, (state) => ({ ...state, loading: true })),
   on(loadUsersSuccess, (state, { users }) => ({ ...state, users, loading: false })),
   on(loadUsersFailure, (state, { error }) => ({ ...state, error, loading: false })),
-  on(loadUserDetails, (state, { user }) => ({ ...state, user, loading: false })),
+  on(loadUserDetails, (state, { selectedUser }) => ({ ...state, selectedUser, loading: false })),
 );

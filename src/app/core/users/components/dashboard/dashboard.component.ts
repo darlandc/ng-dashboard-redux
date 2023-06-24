@@ -7,6 +7,7 @@ import {
   selectUsers,
   selectLoading,
   selectError,
+  selectUserById,
 } from '../../store/users.selectors';
 
 @Component({
@@ -26,5 +27,11 @@ export class DashboardComponent implements OnInit {
     this.error$ = this.store.select(selectError);
 
     this.store.dispatch(loadUsers());
+  }
+
+  selectUser(id: string) {
+    this.store.select(selectUserById(id)).subscribe((user) => {
+      console.log(user);
+    });
   }
 }

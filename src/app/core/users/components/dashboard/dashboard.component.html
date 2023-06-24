@@ -2,7 +2,7 @@ dashboard component here!
   <!-- {{ users$ | async | json }} -->
 
   <div *ngFor="let user of users$ | async">
-    <p>{{ user.fullName + ' - ' + user.email.email | json }} <button>select</button></p>
+    <p>{{ user.fullName + ' - ' + user.email.email | json }} <button (click)="selectUser(user.id)">select</button></p>
   </div>
 
 

@@ -1,16 +1,4 @@
-type User = {
-  id: string;
-  fullName: string;
-  email: {
-    email: string;
-  };
-  mobile: string;
-  mainframeData: {
-    logon: string;
-  };
-};
-
-const mockUsers: User[] = [
+const users = [
   {
     id: 'dsf98ffdsdgf601',
     fullName: 'João Silva',
@@ -32,7 +20,7 @@ const mockUsers: User[] = [
   {
     id: 'dsf98fwdsfrt5s03',
     fullName: 'Pedro Santos',
-    email: {email: 'pedro.santos@example.com',},
+    email: { email: 'pedro.santos@example.com' },
     mobile: '+55 555555555',
     mainframeData: {
       logon: 'C6724A',
@@ -40,4 +28,4 @@ const mockUsers: User[] = [
   },
 ];
 
-export default mockUsers;
+export default users;

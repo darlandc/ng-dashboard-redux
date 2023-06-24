@@ -9,13 +9,11 @@ export const selectUsers = createSelector(
   (state: { users: User[]; }) => state.users
 );
 
-// Definir seletor de carregamento
 export const selectLoading = createSelector(
   selectUserState,
   (state: { loading: any; }) => state.loading
 );
 
-// Definir seletor de erro
 export const selectError = createSelector(
   selectUserState,
   (state: { error: any; }) => state.error
@@ -25,5 +23,6 @@ export const selectUserById = (userId: string) =>
   createSelector(
     selectUsers,
     (users: User[]) => users.find(user => user.id === userId)
-  );
+);
+
 

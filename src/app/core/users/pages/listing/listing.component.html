@@ -1,0 +1,6 @@
+<div *ngFor="let user of users$ | async;">
+  <p>
+    {{ user.fullName | json }}
+    <button (click)="selectUser(user.id)">select</button>
+  </p>
+</div>

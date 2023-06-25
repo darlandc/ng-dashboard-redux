@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/internal/Observable';
-import { loadUserDetails } from '../../store/users.actions';
-import { selectUserById } from '../../store/users.selectors';
+import { loadUserDetails } from '../../state/users.actions';
+import { selectUserById } from '../../state/users.selectors';
 
 @Component({
   selector: 'app-listing',

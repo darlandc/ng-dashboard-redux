@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { User } from '../../interfaces/user.interface';
-import { loadUserDetails, loadUsers } from '../../store/users.actions';
+import { loadUserDetails, loadUsers } from '../../state/users.actions';
 import {
   selectUsers,
   selectLoading,
   selectError,
   selectUserById,
-} from '../../store/users.selectors';
+} from '../../state/users.selectors';
 
 @Component({
   selector: 'app-dashboard',
@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
   loading$!: Observable<boolean>;
   error$!: Observable<any>;
   selectedUser!: any;
+  showFiller?: false;
 
   constructor(private store: Store) {}
 

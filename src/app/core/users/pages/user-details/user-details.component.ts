@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { loadUserDetails } from '../../store/users.actions';
+import { loadUserDetails } from '../../state/users.actions';
 import { User } from '../../interfaces/user.interface';
-import { UserState } from '../../store/users.reducer';
-import { selectUser } from '../../store/users.selectors';
+import { UserState } from '../../state/users.reducer';
+import { selectUser } from '../../state/users.selectors';
 
 @Component({
   selector: 'app-user-details',
